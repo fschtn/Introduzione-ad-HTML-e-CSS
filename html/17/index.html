@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML5</title>
+    </head>
+    <body>
+        <h1>HTML5</h1>
+        <a href="../../index.html">&larr; Torna al menù</a><br /><br />
+        <p>
+            Con l'introduzione dell'HTML5, oltre all'introduzione di nuove funzionalità per il browser (in modo da far eseguire il meno possibile contenuti Flash), sono state introdotte novità anche per facilitare il compito degli sviluppatori, soprattutto in ambito di interazione utente.<br />
+            Prima di tutto, sono stati aggiunti dei tag come:
+            <ul>
+                <li><code><b>&lt;header&gt;</b></code> — Questo tag identifica l'header della pagina, ovvero la parte (solitamente posizionata in alto) che raffigura l'identità del sito web, con logo, titolo, menù e tutte le altre informazioni che (solitamente) sono presenti su tutte le pagine</li>
+                <li><code><b>&lt;footer&gt;</b></code> — Questo tag ha lo stesso ruolo dell'<code>header</code>, ma viene solitamente posizionato a fondo pagina, con dei link utili, il copyright e altre informazioni utili alla navigazione</li>
+                <li><code><b>&lt;nav&gt;</b></code> — Questo tag contiene solitamente degli elementi <code>menuitem</code> e rappresenta la parte dedicata alla navigazione del sito, come il menu di navigazione principale, i link di spostamento fra le pagine o altro</li>
+                <li><code><b>&lt;aside&gt;</b></code> — Solitamente, questo tag identifica la sidebar di un sito, ovvero la barra laterale che contiene informazioni correlate al contenuto della pagina, ma non "principali"</li>
+                <li><code><b>&lt;main&gt;</b></code> — Al contrario dell'<code>aside</code>, questo tag identifica il contenuto princpale della pagina</li>
+                <li><code><b>&lt;article&gt;</b></code> — Volendo specificare ancora di più il contenuto della pagina, questo identifica, qualora fosse presente, l'articolo contenuto nella pagina (come testo formattato e immagini)</li>
+                <li><code><b>&lt;figure&gt;</b></code> — Questo elemento contiene solitamente informazioni correlate ad una immagine nel codice HTML. Contiene quasi sempre il tag <code>img</code> e <code>figcaption</code></li>
+                <li><code><b>&lt;figcaption&gt;</b></code> — Questo element fornisce una descrizione per l'immagine contenuto all'interno dello stesso <code>figure</code></li>
+                <li><code><b>&lt;menuitem&gt;</b></code> — Identifica un singolo elemento del menù. Può contenere il link della voce del menù ed altri elementi che lo raffigurano</li>
+                <li><code><b>&lt;progress&gt;</b></code> — Mostra a schermo uno "slide" che mostra l'avanzamento di qualcosa. Solitamente contiene due attributi principali: <code><b>value</b></code>, che indica il valore da dare allo slider; <code><b>max</b></code> che indica il valore massimo rappresentabile dallo slider. Sarà l'elemento stesso a calcolare poi la percentuale dello spazio da lasciare prima e dopo il "puntino"</li>
+                <li><code><b>&lt;section&gt;</b></code> — Identifica una sezione della pagina. Usata soprattutto per rimpiazzare le <code>div</code> che venivano usate come "contenitori di div"</li>
+                <li><code><b>&lt;time&gt;</b></code> — Identifica un orario/data/timestamp</li>
+            </ul>
+            In secondo luogo, sono stati introdotti degli attributi, utilizzabili su qualsiasi elemento, quali:
+            <ul>
+                <li><code><b>contenteditable</b></code>, il quale permette di modificare il contenuto di un tag</li>
+                <li><code><b>contextmenu</b></code>, il quale permette di mostrare una <code>div</code> creata dall'utente invece del classico menù che si ha cliccando con il tasto destro del mouse</li>
+                <li><code><b>data-*</b></code>, in cui è possibile (rimpiazzando l'<code>*</code> con il nome di una proprietà) inserire qualsiasi valore della proprietà che dovrà essere gestita poi tramite JavaScript</li>
+                <li><code><b>draggable</b></code>, che assume un valore booleano il quale indica se l'elemento è trascinabile o meno, anche per interagire poi in maniera dinamica con JavaScript</li>
+                <li><code><b>hidden</b></code>, il quale può anche non avere alcun valore e nasconde l'elemento sul quale è aggiunto, come un <code>input</code> di tipo <code>hidden</code></li>
+                <li><code><b>spellcheck</b></code>, che è abilitato di default sui contenuti che hanno l'attributo <code>contenteditable</code>, ma può essere disabilitato impostando il suo valore su <code>false</code></li>
+            </ul>
+            Altre novità sono state introdotte come valori dell'attributo <code>type</code> degli <code>input</code>, abilitando così nuove funzioni e formati.
+        </p>
+
+
+
+        <h2>Nuovi attributi</h2>
+        <h3><code>contenteditable</code></h3>
+        <p>
+            Questo attributo permette all'utente di modificare il contenuto dell'elemento tramite un doppio click.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <span contenteditable>Il contenuto di questo span è editabile</span></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <span contenteditable>Il contenuto di questo span è editabile</span>
+
+<br /><br /><br /><br />
+
+        <h3><code>contextmenu</code></h3>
+        <p>
+            Questo attributo permette di mostrare un menu diverso da quello classico quando viene eseguito un click con il tasto destro sull'elemento specificato.<br />
+            Purtroppo questa funzionalità non è disponibile su tutti i browser.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <div contextmenu="mymenu">cliccami col destro</div>
+    <menu type="context" id="mymenu">
+        <menuitem label="Refresh"></menuitem>
+        <menuitem label="Twitter"></menuitem>
+    </menu></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <div contextmenu="mymenu">cliccami col destro</div>
+        <menu type="context" id="mymenu">
+            <menuitem label="Refresh"></menuitem>
+            <menuitem label="Twitter"></menuitem>
+        </menu>
+
+<br /><br /><br /><br />
+
+        <h3><code>data-*</code></h3>
+        <p>
+            Questo attributo può essere personalizzato scrivendo qualsiasi stringa al posto dell'*.<br />
+            I valori di questi attributi potranno poi essere ottenuti e utilizzati tramite JavaScript.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <span data-contenuto="nome">questo span contiene il nome dell'utente</span></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <span data-contenuto="nome">questo span contiene il nome dell'utente</span>
+
+<br /><br /><br /><br />
+
+        <h3><code>draggable</code></h3>
+        <p>
+            Questo attributo permette di trasformare un elemento da "statico" a trascinabile.<br />
+            Integrato correttamente con del codice JavaScript, è possibile far spostare all'utente gli elementi sulla pagina, in modo da posizionarli come più desidera.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <span draggable="true">Questo contenuto e draggable</span></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <span draggable="true">Questo contenuto e draggable</span>
+
+<br /><br /><br /><br />
+
+        <h3><code>hidden</code></h3>
+        <p>
+            Questo attributo non fa altro che nascondere un elemento.<br />
+            Molto utile se, in JavaScript, si vuole mostrare o nascondere un elemento su richiesta dell'utente.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <span hidden>Questo contenuto è nascosto</span></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <span hidden>Questo contenuto è nascosto</span>
+
+<br /><br /><br /><br />
+
+        <h3><code>spellcheck</code></h3>
+        <p>
+            Questo contenuto, in concomitanza dell'attributo <code>contenteditable</code>, permette di abilitare o disabilitare il controllo dello spelling in fase di digitazione dell'utente.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <span contenteditable spellcheck="true">Modificnado questo contneuto, viene veriicato se è scrito correttmente</span></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <span contenteditable spellcheck="true">Modificnado questo contneuto, viene veriicato se è scrito correttmente</span>
+
+<br /><br /><br /><br />
+
+        <h2>Nuovi input</h2>
+        <p>
+            Vediamo, per ciascun input, il suo codice sorgente e il risultato che viene mostrato a schermo:
+        </p>
+
+        <h3><code>&lt;input type="number"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="number" min="10" max="50" step="5"/></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="number" min="10" max="50" step="5"/>
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="tel"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="tel" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="tel" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="url"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="url" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="url" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="color"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="color" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="color" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="range"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="range" from="0" to="100"/></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="range" from="0" to="100"/>
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="email"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="email" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="email" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="datetime"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="datetime" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="datetime" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="datetime-local"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="datetime-local" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="datetime-local" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="date"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="date" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="date" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="month"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="month" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="month" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="week"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="week" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="week" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;input type="time"&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="time" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="time" />
+
+<br /><br /><br /><br />
+
+        <h3><code>&lt;datalist&gt;</code></h3>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="text" name="giudiz" list="listagiudizi">
+    <datalist id="listagiudizi">
+      <option value="insufficiente">
+      <option value="sufficiente">
+      <option value="discreto">
+      <option value="buono">
+      <option value="ottimo">
+    </datalist></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="text" name="giudiz" list="listagiudizi">
+        <datalist id="listagiudizi">
+            <option value="insufficiente">
+            <option value="sufficiente">
+            <option value="discreto">
+            <option value="buono">
+            <option value="ottimo">
+        </datalist>
+
+<br /><br /><br /><br />
+
+        <h3>Nuovi attributi per i form</h3>
+
+        <h3><code>novalidate</code></h3>
+        <p>
+            Questo attributo può essere applicato sul tag <code>form</code> per evitare che, al momento dell'invio, vengano effettuati i controlli di verifica specificati dai singoli input.
+        </p>
+        <p>
+            Si può ottenere scrivendo il codice:
+        </p>
+        <xmp>    <form novalidate="true">
+        ...
+    </form></xmp>
+        <p>
+            <i>Personalmente, lo trovo poco utile, perchè vanifica tutto il lavoro fatto per la creazione del form.</i>
+        </p>
+
+<br /><br /><br /><br />
+
+        <h3><code>autofocus</code></h3>
+        <p>
+            Questo attributo "fa clic" automaticamente sull'elemento di input specificato, mettendo il focus direttamente su quell'elemento, e facendo così in modo che l'utente venga portato (anche scorrendo la pagina) a quell'elemento.<br />
+            Prova a ricaricare questa pagina, vedrai che scorrerà automaticamente fino a questo punto, perchè il browser crede che tu debba inserire delle informazioni qui dentro.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="text" autofocus /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="text" autofocus />
+
+<br /><br /><br /><br />
+
+        <h3><code>required</code></h3>
+        <p>
+            Questo attributo segnala questo campo come "obbligatorio" o, più precisamente, come "richiesto".<br />
+            Nel momento dell'invio del form, se questo campo sarà lasciato vuoto, il browser ci mostrerà un avviso che ci ricorderà di riempirlo, senza bisogno di integrarlo con codice JavaScript.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="text" required /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="text" required />
+
+<br /><br /><br /><br />
+
+        <h3><code>placeholder</code></h3>
+        <p>
+            L'attributo <code>placeholder</code> ha un ruolo molto simile a quello di <code>value</code>, con la differenza di mostrare del testo che non è veramente presente come valore del campo, ma è solamente visualizzato in maniera "invisibile".<br />
+            Iniziando a scrivere all'interno di un campo con questo attributo, infatti, si vedrà il testo di default scomparire.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="text" value="Inserisci testo" /><br />
+    <input type="text" placeholder="Inserisci testo" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="text" value="Inserisci testo" /><br />
+        <input type="text" placeholder="Inserisci testo" />
+
+<br /><br /><br /><br />
+
+        <h3><code>autocomplete</code></h3>
+        <p>
+            Solitamente, nei browser, quando si inizia a digitare qualcosa all'interno di un campo, vengono mostrati tutti i valori inseriti precedentemente all'interno dello stesso campo.<br />
+            Questo è possibile grazie all'<code>autocomplete</code>, che mostra tutti i valori inseriti all'interno di uno stesso campo con lo stesso attributo <code>name</code>. Ad esempio, se su Facebook c'è un campo con <code>name="email"</code> e su Netflix c'è un altro campo con lo stesso <code>name</code>, i valori inseriti in uno verranno mostrati anche come suggerimenti dell'altro campo, e viceversa.<br />
+            Per disabilitare questa feature, è possibile scrivere "off" come valore dell'attributo <code>autocomplete</code>, il quale provvederà a non mostrare più i suggerimenti per quel campo.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="text" name="email" autocomplete="on" /><br />
+    <input type="text" name="email" autocomplete="off" /></xmp>
+        <p>
+            Si ottiene il seguente risultato:
+        </p>
+        <input type="text" name="email" autocomplete="on" /><br />
+        <input type="text" name="email" autocomplete="off" />
+
+<br /><br /><br /><br />
+
+        <h3><code>pattern</code></h3>
+        <p>
+            Questo attributo viene usato per inserire un'<a href="https://it.wikipedia.org/wiki/Espressione_regolare" target="_blank">espressione regolare</a> che deve essere soddisfatta affinchè quel campo sia inviato correttamente senza ricevere errori dal form.
+        </p>
+        <p>
+            Scrivendo il codice:
+        </p>
+        <xmp>    <input type="text" name="codice_sconto" pattern="[a-zA-Z0-9]*" /></xmp>
+        <p>
+            Si ottiene il seguente risultato: un campo che accetta tutte le lettere maiuscole, minuscole e i numeri, senza simboli.
+        </p>
+        <input type="text" name="codice_sconto" pattern="[a-zA-Z0-9]*" />
+
+<br /><br />
+
+
+    </body>
+</html>

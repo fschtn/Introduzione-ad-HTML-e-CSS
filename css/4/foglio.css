@@ -1,0 +1,18 @@
+xmp {
+    display: inline-block;
+    color: #fff;
+    background: #111;
+    padding: 15px 20px;
+    margin: 0px 0px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    border-radius: 4px;
+}
+
+code {
+    background: #111;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 7px;
+    border-radius: 4px;
+}

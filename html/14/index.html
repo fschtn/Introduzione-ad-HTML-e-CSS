@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le tabelle</title>
+    </head>
+    <body>
+        <h1>Le tabelle</h1>
+        <a href="../../index.html">&larr; Torna al menù</a><br /><br />
+        <p>
+            In inglese, la parola "tabella", si dice "<code>table</code>", che è anche il tag che identifica l'inizio di una tabella in HTML.<br />
+            Al suo interno, è possibile creare delle righe e delle colonne. In ordine, appunto, devono essere create prima delle righe, le quali conterranno a loro volta delle celle che verranno poi identificate dal browser come colonne.<br />
+            Le riche vengono identificate dal tag <code>tr</code>, che sta per "table row", mentre le celle vengono identificate con il tag <code>td</code>, che sta per "table data".
+        </p>
+        <table>
+            <tr>
+                <td>Lunedi</td>
+                <td>Martedì</td>
+                <td>Mercoledi</td>
+            </tr>
+            <tr>
+                <td>Reti di calcolatori</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+        <h2>Formattazione</h2>
+        <p>
+            Per formattare una tabella sono disponibili gli attributi <code>border</code>, <code>width</code>, <code>align</code>, <code>cellspacing</code> e <code>cellpadding</code>.<br />
+            Un attributo di formattazione non visiva è invece <code>summary</code>, che specifica il "significato" della tabella, il quale verrà interpretato da browser e motori di ricerca, ma non visualizzato a schermo.<br />
+            Per le righe e le celle della tabella è possibile applicare gli attributi <code>width</code>, <code>height</code> e <code>bgcolor</code>
+        </p>
+        <p>
+            Il tag <code>table</code> della seguente tabella è strutturato così:
+            <xmp>    <table border="1px" summary="Orario scolastico" width="1000px" height="300px" align="center" cellspacing="10" cellpadding="10"></xmp>
+            Ma alcune delle sue <code>td</code> hanno attributo per modificarne l'apparenza
+        </p>
+        <table border="1px" summary="Orario scolastico" width="1000px" height="300px" align="center" cellspacing="10" cellpadding="10">
+            <tr align="center">
+                <td>Lunedi</td>
+                <td>Martedì</td>
+                <td>Mercoledi</td>
+                <td>Giovedì</td>
+            </tr>
+            <tr>
+                <td width="400px">Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+            <tr height="200px">
+                <td >Sistemi</td>
+                <td></td>
+                <td>Elettrotecnica</td>
+                <td>Educazione dell'ambiente</td>
+            </tr>
+            <tr bgcolor="red">
+                <td>Matematica</td>
+                <td>Fisica alternativa</td>
+                <td></td>
+                <td>Fisica alternativa</td>
+            </tr>
+            <tr>
+                <td>Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+        </table>
+        <h2>Thead, Tfoot, th</h2>
+        <p>
+            Oltre alle normali righe e celle, esistono delle righe speciali delle celle speciali, che identificano dei contenuti non utili alla tabella, ma alla sua interpretazione da parte dell'utente.<br />
+            Nel nostro caso, i giorni della settimana non sono utili alla tabella, ma servono per interpretare correttamente le informazioni in essa contenute.<br />
+            Le righe di questo tipo sono identificate con <code>thead</code> e <code>tfoot</code>, che si troveranno rispettivamente come prima e ultima riga della tabella.<br />
+            Le "celle speciali" sono invece le celle che contengono l'intestazione della tabella (i giorni), e vengono identificate con il tag <code>th</code>, ovvero "table header"
+        </p>
+        <p>
+            Nella tabella seguente, la prima <code>tr</code> è stata rimpiazzata con una <code>thead</code>, come segue:
+            <xmp>    <thead align="center">
+        <th>Lunedi</th>
+        <th>Martedì</th>
+        <th>Mercoledi</th>
+        <th>Giovedì</th>
+    </thead></xmp>
+            Che appare quindi nel seguente modo:
+        </p>
+        <table border="1px">
+            <thead align="center">
+                <th>Lunedi</th>
+                <th>Martedì</th>
+                <th>Mercoledi</th>
+                <th>Giovedì</th>
+            </thead>
+            <tr>
+                <td>Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+            <tr>
+                <td >Sistemi</td>
+                <td></td>
+                <td>Elettrotecnica</td>
+                <td>Educazione dell'ambiente</td>
+            </tr>
+            <tr>
+                <td>Matematica</td>
+                <td>Fisica alternativa</td>
+                <td></td>
+                <td>Fisica alternativa</td>
+            </tr>
+            <tr>
+                <td>Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+            <tfoot>
+                <td>Riposo</td>
+                <td>Riposo</td>
+                <td>Riposo</td>
+                <td>Riposo</td>
+            </tfoot>
+        </table>
+        <p>
+            Allo stesso modo, l'ultima <code>tr</code> è stata rimpiazzata con un <code>tfoot</code>, ovvero:
+            <xmp>    <tfoot>
+        <td>Riposo</td>
+        <td>Riposo</td>
+        <td>Riposo</td>
+        <td>Riposo</td>
+    </tfoot></xmp>
+        </p>
+        <h2>colspan e rowspan</h2>
+        <p>
+            Così come è possibile inserire un numero di celle diverso ad ogni riga, è anche possibile "espandere" una cella in modo da occupare piu spazio di quello a disposizione.<br />
+            Questi attributi prendono un valore numerico, che identifica per quante righe o colonne quella determina riga o cella deve espandersi.
+        </p>
+        <table border="1px">
+            <thead  align="center">
+                <th>Lunedi</th>
+                <th>Martedì</th>
+                <th>Mercoledi</th>
+                <th>Giovedì</th>
+            </thead>
+            <tr>
+                <td rowspan="3">Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td rowspan="2">Elettrotecnica</td>
+                <td>Educazione dell'ambiente</td>
+            </tr>
+            <tr>
+                <td>Fisica alternativa</td>
+                <td>Fisica alternativa</td>
+            </tr>
+            <tr>
+                <td>Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+            <tfoot>
+                <td colspan="4" align="center">Riposo</td>
+            </tfoot>
+        </table>
+        <h2>Caption</h2>
+        <p>
+            E' possibile inserire una descrizione della tabella (in stile "Wikipedia") tramite il tag <code>caption</code>, il quale non è contenuto in nessuna riga o colonna.
+        </p>
+        <p>
+            La caption è stata integrata nella tabella semplicemente scrivendo:
+            <xmp>    <table border="1px">
+        <caption>
+            Orario scolastico
+        </caption>
+        ...
+    </table></xmp>
+        </p>
+        <table border="1px">
+            <caption>
+                Orario scolastico
+            </caption>
+            <thead  align="center">
+                <th>Lunedi</th>
+                <th>Martedì</th>
+                <th>Mercoledi</th>
+                <th>Giovedì</th>
+            </thead>
+            <tr>
+                <td rowspan="3">Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td rowspan="2">Elettrotecnica</td>
+                <td>Educazione dell'ambiente</td>
+            </tr>
+            <tr>
+                <td>Fisica alternativa</td>
+                <td>Fisica alternativa</td>
+            </tr>
+            <tr>
+                <td>Reti di calcolatori</td>
+                <td>Educazione dell'ambiente</td>
+                <td></td>
+                <td>Sistemi</td>
+            </tr>
+            <tfoot>
+                <td colspan="4" align="center">Riposo</td>
+            </tfoot>
+        </table>
+
+    </body>
+</html>

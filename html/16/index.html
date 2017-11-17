@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I form</title>
+    </head>
+    <body>
+        <h1>I form</h1>
+        <a href="../../index.html">&larr; Torna al menù</a><br /><br />
+        <p>
+            I form servono all'utente per inserire informazioni che verranno poi gestite dal sito web (lato server).<br />
+            Un esempio di form può essere il seguente, in cui abbiamo solamente un campo:
+        </p>
+        <p>
+            <form action="https://www.facebook.com/search/top/" method="get">
+                Ricerca su facebook:
+                <input type="text" name="q" value="Cerca qualcuno.." />
+                <input type="submit" value="Cerca" />
+                <input type="reset" value="Cancella" />
+            </form>
+        </p>
+        <p>
+            <form action="https://www.youtube.com/results" method="get">
+                Ricerca su youtube:
+                <input type="text" name="search_query" value="Cerca un video.." />
+                <input type="submit" value="Cerca" />
+                <input type="reset" value="Cancella" />
+            </form>
+        </p>
+        <p>
+            Il tag principale di ogni form è, appunto, <b>form</b>.<br />
+            Questo tag deve essere aperto e chiuso, e dovrà contenere al suo interno tutti i campi da compilare, che vengono identificati con <b>input</b>.
+        </p>
+        <h2>Tipi di input</h2>
+        <p>
+            Nonostante i tipi di input siano moltissimi, hanno molte cose in comune, come ad esempio gli attributi che vi possono essere applicati.
+            <ul>
+                <li><code>name</code> è l'attributo che deve essere presente in tutti i tag all'interno del form, deve avere una stringa di testo che rappresenta quell'input, e che verrà usata dal server per identificare quel campo una volta che il form sarà inviato</li>
+                <li><code>value</code> è l'attributo che definisce il valore predefinito di un input, soprattutto nei casi in cui l'utente non abbia la possibilità di inserirlo manualmente (come ad esempio nelle <code>select</code> o nei <code>checkbox</code>, che vedremo più sotto)</li>
+                <li><code>required</code>, che va inserito in tutti i tag che devono essere considerati come "obbligatori" per l'invio del form</li>
+            </ul>
+        </p>
+
+
+
+        <h3>&lt;input type="text"&gt;</h3>
+        <p>
+            Gli input di tipo testo vengono usati quando si richiedono in input piccole porzioni di testo.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="text" name="nome" /></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="text" />
+        <p>
+            Gli attributi che è possibile applicare su questo tag sono principalmente:
+            <ul>
+                <li><code>maxlength</code>, che specifica la massima quantità di caratteri che possono essere immessi nell'input</li>
+                <li><code>size</code>, che specifica la dimensione dell'input dal lato grafico</li>
+                <li><code>pattern</code>, che deve contenere un'espressione regolare da soddisfare per fare in modo che il campo venga accettato</li>
+            </ul>
+        </p>
+
+
+
+        <h3>&lt;input type="password"&gt;</h3>
+        <p>
+            Gli <code>input</code> di tipo <code>password</code> hanno la stessa identica funzione degli <code>input</code> di tipo <code>text</code>, con l'unica, grande, differenza di mostrare, invece che le lettere inserite dall'utente, una serie di puntini pari al numero di caratteri inseriti.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="password" name="pwd" /></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="password" name="pwd" />
+
+
+
+        <h3>&lt;input type="radio"&gt;</h3>
+        <p>
+            Come è solito vedere sui vari siti web, gli <code>input</code> di tipo <code>radio</code> permettono di selezionare una sola fra le opzioni proposte.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="radio" name="sesso" value="m" /> M<br />
+    <input type="radio" name="sesso" value="f" /> F</xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="radio" name="sesso" value="m" /> M<br />
+        <input type="radio" name="sesso" value="f" /> F
+
+
+
+        <h3>&lt;input type="checkbox"&gt;</h3>
+        <p>
+            A differenza dei <code>radio</code>, i <code>checkbox</code> possono avere come risultato della selezione più di una opzione, che verrà poi inviata al server sotto forma di array.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="checkbox" name="gusti" value="film" /> Film<br />
+    <input type="checkbox" name="gusti" value="musica" /> Musica<br />
+    <input type="checkbox" name="gusti" value="spettacolo" /> Spettacolo<br />
+    <input type="checkbox" name="gusti" value="carte" /> Carte</xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="checkbox" name="gusti" value="film" /> Film<br />
+    <input type="checkbox" name="gusti" value="musica" /> Musica<br />
+    <input type="checkbox" name="gusti" value="spettacolo" /> Spettacolo<br />
+    <input type="checkbox" name="gusti" value="carte" /> Carte
+
+
+
+        <h3>&lt;input type="file"&gt;</h3>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="file" name="img" /></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="file" name="img" />
+
+
+
+        <h3>&lt;select&gt; &lt;option&gt;</h3>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <select name="provincia">
+        <option disabled selected>Seleziona..</option>
+        <option value="usa">Agrigento</option>
+        <option value="asia">Latina</option>
+        <option value="africa">Roma</option>
+        <optgroup label="Italia">
+            <option value="agrigento">Agrigento</option>
+            <option value="latina">Latina</option>
+            <option value="roma">Roma</option>
+        </optgroup>
+        <optgroup label="Francia">
+            <option value="parigi">Parigi</option>
+            <option value="lione">Lione</option>
+            <option value="nantes">Nantes</option>
+        </optgroup>
+    </select></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <select name="provincia">
+            <option disabled selected>Seleziona..</option>
+            <option value="usa">Agrigento</option>
+            <option value="asia">Latina</option>
+            <option value="africa">Roma</option>
+            <optgroup label="Italia">
+                <option value="agrigento">Agrigento</option>
+                <option value="latina">Latina</option>
+                <option value="roma">Roma</option>
+            </optgroup>
+            <optgroup label="Francia">
+                <option value="parigi">Parigi</option>
+                <option value="lione">Lione</option>
+                <option value="nantes">Nantes</option>
+            </optgroup>
+        </select>
+
+
+
+        <h3>&lt;textarea&gt;</h3>
+        <p>
+            Questo tag, che si differenzia da un input per le sue dimensioni, viene usato solitamente, al posto degli <code>input text</code> per far scrivere all'utente testi di grandi dimensioni, che non sarebbero comodi da visualizzare in un <code>input</code> di tipo <code>text</code>.<br />
+            Per modificare le sue dimensioni, è possibile usare gli attributi <code>cols</code> e <code>rows</code>, anche se l'utente avrà comunque la possibilità, tramite l'angolo in basso a destra, di ridimensionare tutta la <code>textarea</code>.<br />
+            Questa funzione può essere poi disabilitata in CSS.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <textarea name="messaggio">Ciao</textarea></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <textarea name="messaggio">Ciao</textarea>
+
+
+
+        <h3>&lt;button&gt;</h3>
+        <p>
+            Questo tag, come possiamo vedere, non viene identificato come un input, perchè, appunto, <u>non è un input</u>.<br />
+            Questo tag viene solitamente usato per far svolgere funzioni JavaScript su richiesta dell'utente come, ad esempio, la generazione automatica del codice fiscale.<br />
+            Bottoni come quello che segue possono anche simulare l'invio del form registrando i dati inseriti in una <code>div</code> o in qualche altra parte della pagina, pur non inviando il form vero e proprio.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <button name="genera_cf" onclick="alert('Hai premuto, bravo.');">Premimi!</button></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <button name="genera_cf" onclick="alert('Hai premuto, bravo.');">Premimi!</button>
+        <p>
+            Al quale è possibile far eseguire qualsiasi funzione JavaScript.<br />
+            In questo caso, non farà altro che mostrare un avviso
+        </p>
+
+
+
+        <h3>&lt;input type="image"&gt;</h3>
+        <p>
+            Un input come questo viene solitamente usato quando si vuole integrare un tasto con una formattazione molto complesso o non realizzabile in CSS.<br />
+            Per risolvere questo problema, si può pensare di utilizzare un'immagine, che, quando cliccata, avrà lo stesso effetto di un <code>button</code>.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="image" src="../11/drago.jpg" name="send2" /></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="image" src="../11/drago.jpg" name="send2" />
+
+
+
+        <h3>&lt;input type="hidden"&gt;</h3>
+        <p>
+            Questo tipo di input viene usato dagli sviluppatori per passare, assieme alle informazioni fornite dall'utente, anche delle informazioni utili all'interpretazione di questi dati.<br />
+            Ad esempio, all'interno di una chat, oltre al messaggio da inviare, dovranno essere passati parametri come l'id del mittente o l'id del destinatario, che possono essere inseriti in campi <code>hidden</code> del <code>form</code>.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="hidden" name="user-id" value="127863" /></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="hidden" name="user-id" value="127863" />
+        <p>
+            Che ovviamente non verrà visualizzato, perchè l'utente non deve essere in grado di visualizzare o modificare il valore di questo campo.
+        </p>
+
+
+
+        <h3>&lt;input type="submit"&gt;</h3>
+        <p>
+            Questo tipo di input deve essere presente in tutti i form, ed è il tasto che server, dal lato client, ad inviare il form al server.<br />
+            Premendolo, le informazioni inserite negli input compresi nel tag <code>form</code> verranno inviate, con il metodo specificato come attributo, all'indirizzo specificato nella <code>action</code> del tag <code>form</code><br />
+            Il testo al suo interno può essere personalizzato tramite l'attributo <code>value</code>
+        </p>
+        <xmp>    <input type="submit" value="Invia" /></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="submit" value="Invia" />
+
+
+
+        <h3>&lt;input type="reset"&gt;</h3>
+        <p>
+            Questo tipo di input viene utilizzato per ripristinare ai valori di default all'interno del form, così come specificati dagli attributi <code>value</code> dei singoli input.
+        </p>
+        <p>
+            Il codice seguente:
+        </p>
+        <xmp>    <input type="reset" /></xmp>
+        <p>
+            Può far visualizzare un risultato del genere:
+        </p>
+        <input type="reset" /><br />
+
+
+        <br /><br />
+
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Titolo della pagina</title>
+    </head>
+    <body>
+        <h1>Le liste</h1>
+        <a href="../../index.html">&larr; Torna al menù</a><br /><br />
+        <p>
+            Possono essere principalmente di due tipi: ordinate (<i>ordered</i>) o non ordinate (<i>unordered</i>). I tag delle liste sono quindi:<br />
+            <ul>
+                <li><code>ul</code> che sta per <b>unordered list</b></li>
+                <li><code>ol</code> che sta per <b>ordered liste</b></li>
+            </ul>
+            Gli elementi al loro interno invece sono gli stessi, e vengono identificati con <code>li</code>, ovvero "<i>list item</i>"
+        </p>
+        <h2>Liste non ordinate</h2>
+        <p>
+            Le liste non ordinate vengono quindi rappresentate con il codice:
+            <xmp>    <ul>
+        <li>500 gr di farina</li>
+        <li>2 uova</li>
+        <li>6 kg di cacao</li>
+    </ul></xmp>
+            E producono il seguente risultato:
+            <ul>
+                <li>500 gr di farina</li>
+                <li>2 uova</li>
+                <li>6 kg di cacao</li>
+            </ul>
+        </p>
+        <h2>Liste ordinate</h2>
+        <p>
+            Le liste ordinate, invece, hanno una piccola differenza, ovvero il tag <code>ol</code> invece di <code>ul</code>:
+            <xmp>    <ol>
+        <li>Primo classificato</li>
+        <li>Argento</li>
+        <li>Perdente</li>
+    </ol></xmp>
+            Che viene quindi visualizzato come:
+            <ol>
+                <li>Primo classificato</li>
+                <li>Argento</li>
+                <li>Perdente</li>
+            </ol>
+        </p>
+        <h2>Tipi delle liste</h2>
+        <p>
+            L'attributo principale delle liste è il <code>type</code>, che modifica il modo in cui gli elementi della lista vengono identificati.
+        </p>
+        <p>
+            Un esempio di codice per le liste non ordinate è:
+            <xmp>    <ul type="square"></xmp>
+            A cui si possono sostituire tutti gli altri attributi, come <code>square</code>, <code>disc</code>, <code>circle</code>.
+            <ul type="square">
+                <li>500 gr di farina</li>
+                <li>2 uova</li>
+                <li>6 kg di cacao</li>
+            </ul>
+            <ul type="disc">
+                <li>500 gr di farina</li>
+                <li>2 uova</li>
+                <li>6 kg di cacao</li>
+            </ul>
+            <ul type="circle">
+                <li>500 gr di farina</li>
+                <li>2 uova</li>
+                <li>6 kg di cacao</li>
+            </ul>
+        </p>
+        <p>
+            Per quanto riguarda le liste ordinate, invece, il codice è:
+            <xmp>    <ol type="i"></xmp>
+            Che può essere sostituito con gli altri attributi, come  <code>I</code>, <code>i</code>, <code>A</code>, <code>a</code>, <code>1</code>.
+                <ol type="i">
+                    <li>500 gr di farina</li>
+                    <li>2 uova</li>
+                    <li>6 kg di cacao</li>
+                    <li>500 gr di farina</li>
+                    <li>2 uova</li>
+                    <li>6 kg di cacao</li>
+                </ol>
+                <ol type="I">
+                    <li>500 gr di farina</li>
+                    <li>2 uova</li>
+                    <li>6 kg di cacao</li>
+                    <li>500 gr di farina</li>
+                    <li>2 uova</li>
+                    <li>6 kg di cacao</li>
+                </ol>
+                <ol type="A">
+                    <li>500 gr di farina</li>
+                    <li>2 uova</li>
+                    <li>6 kg di cacao</li>
+                </ol>
+                <ol type="a">
+                    <li>500 gr di farina</li>
+                    <li>2 uova</li>
+                    <li>6 kg di cacao</li>
+                </ol>
+        </p>
+        <h2>Liste annidate</h2>
+        <p>
+            Ovviamente, si possono inserire liste dentro le liste, in modo da creare un sotto-elenco.
+            <ul>
+                <li>500 gr di farina</li>
+                <li>2 uova</li>
+                <ul>
+                    <li>500 gr di farina</li>
+                    <li>2 uova</li>
+                    <ul type="circle">
+                        <li>500 gr di farina</li>
+                        <li>2 uova</li>
+                        <li>6 kg di cacao</li>
+                    </ul>
+                    <li>6 kg di cacao</li>
+                </ul>
+                <li>6 kg di cacao</li>
+            </ul>
+        </p>
+
+    </body>
+</html>
