@@ -185,8 +185,8 @@
                 <td>
                     padding-top: 0px;<br />
                     padding-bottom: 20px;<br />
-                    padding-left: 10px;<br />
-                    padding-right: 30px;<br />
+                    padding-left: 30px;<br />
+                    padding-right: 10px;<br />
                     padding: 0px 10px 20px 30px;
                 </td>
                 <td>
@@ -194,6 +194,19 @@
                 </td>
                 <td>
                     <code><b>padding</b></code>, a differenza di <a href="#margin"><code>margin</code></a>, aggiunge una spaziatura interna all'elemento sul quale viene specificato. Come per il <a href="#margin"><code>margin</code></a>, è possibile specificare la spaziatura nelle varie dimensioni grazie agli attributi specifici (<code>left</code>, <code>right</code>, <code>top</code> e <code>bottom</code>), ma è possibile riassumerli (dall'alto e procedendo in senso orario), all'interno del tag <code>padding</code>.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    overflow: hidden;<br />
+                    <b>overflow: scroll;</b><br />
+                    overflow: auto;
+                </td>
+                <td style="display: inline-block; height: 100px; overflow: scroll;">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </td>
+                <td>
+                    <code><b>overflow</b></code> server per definire in che modo far visualizzare un elemento quando il contenuto dell'elemento stesso supera le dimensioni specificate. Proprio per questo motivo, per utilizzare <code>overflow</code> bisogna avere un elemento che abbia un'altezza e/o una larghezza predefinite. Nel nostro esempio, la <code>td</code> ha un'altezza di 100px, ma il contenuto supera quell'altezza, e viene quindi aggiunta la possibilità di scrollare all'interno della <code>td</code> stessa. I valori principali per questo attributo sono <code>hidden</code> (che nasconde tutto quelle che "esce fuori"), <code>scroll</code> (che aggiunge la possibilità di scrollare) e <code>auto</code> (che adatta il contenitore al contenuto, salvo diverse indicazioni).
                 </td>
             </tr>
         </table>
