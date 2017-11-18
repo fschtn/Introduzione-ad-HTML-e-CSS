@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I link</title>
+    </head>
+    <body>
+        <h1>I link</h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            All'interno di una pagina, per connettere altre pagine, è possibile usare i <b>link</b>.<br />
+            I link, in HTML, sono indicati come "Anchor", ovvero "Ancore", quindi vengono identificati con la lettera <code>a</code><br />
+            Ogni link deve puntare ad una pagina o file, che viene identificato come "riferimento HTTP", ovvero "http reference", che viene abbreviato, nel tag, con <code>href</code>.
+        </p>
+        <p>
+            Un esempio di un link è:
+            <xmp>    <a href="http://google.com">Portami a Google</a></xmp>
+            Che genera il risultato seguente:<br />
+            <a href="http://google.com">http://google.com</a>
+        </p>
+        <p>
+            Un altro attributo che può essere dato ai link è <code>target</code>, ovvero il punto in cui il link dovrà fare riferimento.<br />
+            Ad esempio, si può decidere che il link venga aperto nella stessa pagina o in una nuova tab del browser.<br />
+            L'attributo <code>target</code> può assumere valori come <code>_self</code>, <code>_blank</code>, <code>_parent</code> o un nome qualsiasi che verrà dato alla finestra nella quale si aprirà il link.
+        </p>
+        <p>
+            <h2>Esempi</h2>
+            <a href="http://google.com" target="_self">Questo link</a> apre Google nella stessa finestra (<i>può essere omesso</i>)<br />
+            <a href="http://google.com" target="_blank">Questo link</a> apre Google in una nuova tab/finestra<br />
+            <a href="http://google.com" target="_blank">Questo link</a> apre Google nella finestra "genitore" di quella attuale (<i>vedremo meglio nella pagina <a href="../15/index.html">dei frame</a></i>)<br />
+            <a href="http://google.com" target="mario">Questo link</a> apre Google in una finestra che si chiama Mario<br />
+            <a href="http://facebook.com" target="mario">Questo link</a> apre Facebook dentro Mario (la finestra appena creata)<br />
+        </p>
+        <p>
+            Se invece si vuole far riferimento a parti della pagina nella quale ci si trova, si può usare il simbolo di cancelletto (#) seguito dall'<b>id</b> dell'elemento a cui si vuole far riferimento.<br />
+            In questa pagina, ad esempio, è presente un titolo che si chiama "titolo" e, scrivendo il codice seguente:
+            <xmp>    <a href="#titolo">Portami al titolo</a></xmp>
+            Si ottiene questo risultato, che porterà a "titolo":<br />
+            <a href="#titolo">Portami al titolo</a>
+        </p>
+
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <p>
+            <h1 id="titolo">Titolo nascosto (bastava scorrere la pagina)</h1>
+<a href="../../index.html">&larr; Torna al menù</a>
+            Inserendo invece come destinazione solamente il simbolo di cancelletto, si verrà riportati al body, ovvero all'inizio della pagina.<br />
+            <a href="#">Clicca qui per tornare in cima alla pagina</a><br />
+            <a href="#nascosto">Oppure clicca qui per andare ad un altro titolo nascosto</a>
+        </p>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <p>
+            <h1 id="nascosto">Titolo nascostissimo</h1>
+<a href="../../index.html">&larr; Torna al menù</a>
+            <a href="#">Clicca qui per tornare in cima alla pagina</a><br />
+        </p>
+    </body>
+</html>

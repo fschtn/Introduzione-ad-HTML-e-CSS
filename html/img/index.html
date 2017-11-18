@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Le immagini</title>
+    </head>
+    <body>
+        <h1>Le immagini</h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            Per inserire delle immagini all'interno della pagina, possiamo usare un tag puntuale (ovvero che agisce in un punto) identificato da <code>img</code>.<br />
+            L'attributo principale che va messo in questo tag è <code>src</code>, che specifica l'indirizzo (assoluto o relativo) dell'immagine da caricare.
+        </p>
+        <p>
+            Osserviamo ora il codice:
+            <xmp>    <img src="drago.jpg" /></xmp>
+            Che mostra questo risultato:<br />
+            <img src="drago.jpg" /><br />
+            L'immagine appena vista, si trova però all'interno della cartella corrente.<br />
+            E' possibile far riferimento ad altre immagini tramite un percorso relativo:
+            <xmp>    <img src=immagine/drago.jpg /></xmp>
+            Che mostrerà:<br />
+            <img src=immagine/drago.jpg /><br />
+            Oppure inserire un percorso assoluto di un'immagine presente su un dominio web:
+            <xmp>    <img src="https://pbs.twimg.com/profile_images/712352300199710720/HF1Om28Q.jpg" /></xmp>
+            Che avrà risultato:<br />
+            <img src="https://pbs.twimg.com/profile_images/712352300199710720/HF1Om28Q.jpg" />
+        </p>
+        <p>
+            Ovviamente è possibile anche inserire un link ad un'immagine (ovvero inserire, all'interno di un link, un tag di immagine), come:
+            <xmp>    <a href=http://google.com/?q=Dragonball target=_blank>
+        <img src="drago.jpg" />
+    </a></xmp>
+            Che avrà il seguente effetto:<br />
+            <a href=http://google.com/?q=Dragonball target=_blank><img src="drago.jpg" /></a>
+        </p>
+        <h2>Larghezza e altezza</h2>
+        <p>
+            Di una immagine è possibile personalizzare l'altezza e la larghezza tramite due attributi: <i>height</i> e <i>width</i>.<br />
+            La stessa immagine di prima, può essere visualizzata come:
+            <xmp>    <img src="drago.jpg" width="500" height="100" /></xmp>
+            Che ridimensionerà l'immagine nel seguente modo:<br />
+            <img src="drago.jpg" width="500" height="100" />
+        </p>
+        <p>
+            Se non viene specificata una delle due dimensioni, il browser la calcolerà in automatico in modo da non perdere le proporzioni dell'immagine, come nel caso seguente:<br />
+            <img src="drago.jpg" width="200" /><br />
+            <img src="drago.jpg" height="260" /><br />
+        </p>
+        <h2>L'attributo "alt"</h2>
+        <p>
+            L'attributo "<i>alt</i>" serve, qualora l'immagine non venisse trovata o fosse rimossa, a mostrare un testo <b>alt</b>ernativo al posto di quell'immagine, in modo da far capire all'utente cosa doveva esserci in quel punto.<br />
+            Ad esempio, questa è un'immagine del titanic:<br />
+            <img src="titanic.jpg" alt="Foto del Titanic" /><br />
+            Identificata dal codice:
+            <xmp>    <img src="titanic.jpg" alt="Foto del Titanic" /></xmp>
+        </p>
+        <h2>Bordi dell'immagine</h2>
+        <p>
+            E' possibile aggiungere, senza l'ausilio del CSS, dei bordi all'immagine, tramite l'attributo <i>border</i>:<br />
+            <xmp>            <img src="drago.jpg" width="100" border="5px" /></xmp>
+            Che mostrerà:<br />
+            <img src="drago.jpg" width="100" border="5px" />
+        </p>
+        <h2>Spaziatura</h2>
+        <p>
+            Sempre senza il CSS, è possibile decidere quanto spazio deve essere presente fra l'immagine e il contenuto più vicino.<br />
+            Ciò è possibile tramite gli attributi <code>vspace</code> e <code>hspace</code>, che definiscono rispettivamente la spaziatura verticale e orizzontale:
+            <xmp>            <img src="drago.jpg" width="100" vspace="50" hspace="50" /></xmp>
+            Che avrà risultato:<br />
+            <img src="drago.jpg" width="100" vspace="50" hspace="50" />
+        </p>
+        <h2>Allineamento</h2>
+        <p>
+            Senza il CSS, è possibile decidere anche in che modo il testo deve essere allineato rispetto all'immagine.<br />
+            Ciò è possibile tramite l'attributo <i>align</i> che assume valori come <i>top</i>, <i>bottom</i>, <i>middle</i>, <i>left</i> e <i>right</i>:
+        </p>
+        <h3>align="top"</h3>
+        <p>
+            <img src="drago.jpg" align="top" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>align="bottom"</h3>
+        <p>
+            <img src="drago.jpg" align="bottom" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>align="middle"</h3>
+        <p>
+            <img src="drago.jpg" align="middle" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>align="left"</h3>
+        <p>
+            <img src="drago.jpg" align="left" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <h3>align="right"</h3>
+        <p>
+            <img src="drago.jpg" align="right" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+
+        <!-- <p>
+            <img src="drago.jpg" width="1000px" style="position: fixed; top: 0px; left: 0px; z-index: 100;"/>
+
+            <div style="width: 250px; height: 300px; background: rgba(0,0,0,1); position: fixed; top: 200px; left: 350px; z-index: 1900000; cursor: pointer;">
+
+            </div>
+        </p> -->
+
+
+    </body>
+</html>

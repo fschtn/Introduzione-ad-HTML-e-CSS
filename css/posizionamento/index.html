@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Tipi di posizionamento e commenti in CSS</title>
+    </head>
+    <body>
+        <h1>Tipi di posizionamento e commenti in CSS</h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            Il codice CSS di una pagina può essere posizionato in parti diverse, in base al ruolo che deve svolgere.<br />
+            L'opzione più sbrigativa è quella di inserire, come attributo di un elemento, l'attributo <code>style</code> e scriverci come valore il codice CSS che dovrà agire su quell'elemento.
+        </p>
+        <xmp>    <span style="color: blue;">Testo blu</span></xmp>
+        <p>
+            Una seconda opzione è quella di inserire il codice CSS scritto in maniera corretta all'interno del tag <code>style</code>, il quale deve essere contenuto nell'<code>head</code>.
+        </p>
+        <xmp>    <head>
+        <style>
+            span {color: blue;}
+        </style>
+    </head></xmp>
+        <p>
+            La terza opzione, quella che io raccomando a tutti, è quella di scrivere tutto il codice CSS in maniera corretta all'interno di un altro file, con estensione <code>.css</code>, e integrarlo poi all'interno della pagina HTML tramite il seguente tag, contenuto nell'head.
+        </p>
+        <xmp>    <head>
+        <link href="foglio.css" rel="stylesheet" type="text/css" />
+    </head></xmp>
+        <p>
+            Ovviamente, il nome del foglio di stile da implementare dovrà essere rimpiazzato con quello scritto da voi
+        </p>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gli iframe</title>
+    </head>
+    <body>
+        <h1>Gli iframe</h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            Gli iframe possono visti in maniera semplice come delle finestre che danno su altre pagine.<br />
+            Vengono identificati dal tag <code>iframe</code> ed hanno come attributo principale l'<code>src</code>, all'interno del quale andrà specificato l'URL della pagina da mostrare dentro l'iframe stesso.<br />
+            Possono essere usati, come attributi principali: <code>width</code>, <code>height</code> e <code>frameborder</code>, ciascuno dei quali assume un valore in pixel che modificherà la visualizzazione del frame stesso, come fosse CSS.
+        </p>
+        <p>
+            Il seguente codice:
+            <xmp>    <iframe src="https://www.youtube.com/embed/IGQBtbKSVhY" width="800px" height="560px" frameborder="0px">Testo di backup</iframe></xmp>
+            Genererà un risultato come questo:
+        </p>
+        <iframe width="800px" height="560px" src="https://www.youtube.com/embed/IGQBtbKSVhY" frameborder="0px">Testo di backup</iframe>
+        <p>
+            Va inoltre specifica che, all'interno del tag <code>iframe</code>, è possibile inserire del testo qualora il browser non li supportasse (poco probabile) o la pagina nell'<code>src</code> non venisse trovata.
+        </p>
+
+    </body>
+</html>

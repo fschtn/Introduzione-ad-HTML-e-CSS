@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>I caratteri speciali</title>
+        <style>
+            xmp {display: inline;}
+            td {text-align: center; padding: 3px 20px;}
+        </style>
+    </head>
+    <body>
+        <h1>I caratteri speciali</h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            Nella pagine HTML, a meno che non sia diversamente specificato tramite un tag (che vedremo in seguito), alcuni caratteri "speciali" non sono supportati.<br />
+            Per inserire questi caratteri non supportati, si può far riferimento ad un metodo abbastanza semplice: una e commerciale (&) seguita da una stringa identificativa del carattere che si vuole inserire.
+        </p>
+        <p>
+            Vediamo qualche esempio:
+        </p>
+        <table>
+            <thead>
+                <th>Codice</th>
+                <th>Risultato</th>
+            </thead>
+            <tr>
+                <td><xmp>&larr;</xmp></td>
+                <td>&larr;</td>
+            </tr>
+            <tr>
+                <td><xmp>&rarr;</xmp></td>
+                <td>&rarr;</td>
+            </tr>
+            <tr>
+                <td><xmp>&uarr;</xmp></td>
+                <td>&uarr;</td>
+            </tr>
+            <tr>
+                <td><xmp>&darr;</xmp></td>
+                <td>&darr;</td>
+            </tr>
+            <tr>
+                <td><xmp>&lt;</xmp></td>
+                <td>&lt;</td>
+            </tr>
+            <tr>
+                <td><xmp>&gt;</xmp></td>
+                <td>&gt;</td>
+            </tr>
+            <tr>
+                <td><xmp>&copy;</xmp></td>
+                <td>&copy;</td>
+            </tr>
+            <tr>
+                <td><xmp>&reg;</xmp></td>
+                <td>&reg;</td>
+            </tr>
+            <tr>
+                <td><xmp>&trade;</xmp></td>
+                <td>&trade;</td>
+            </tr>
+            <tr>
+                <td><xmp>&euro;</xmp></td>
+                <td>&euro;</td>
+            </tr>
+            <tr>
+                <td><xmp>&reg;</xmp></td>
+                <td>&reg;</td>
+            </tr>
+        </table>
+        <p>
+            Questi sono i caratteri più comuni e utilizzati.<br />
+            Ciascuno di essi può essere scritto anche tramite, invece che una stringa, da:<br />
+            <ul>
+                <li>Un codice decimale, preceduto da un "#" che indica che si tratta di un numero</li>
+                <li>Un codice esadecimale, preceduto da un "#" che indica che si tratta di un numero e una "x" che indica che il numero è esadecimale</li>
+            </ul>
+            Ad esempio:
+        </p>
+        <table>
+            <tr>
+                <td><xmp>&euro;</xmp></td>
+                <td>genera</td>
+                <td>&euro;</td>
+            </tr>
+            <tr>
+                <td><xmp>&#8364;</xmp></td>
+                <td>genera</td>
+                <td>&#8364;</td>
+            </tr>
+            <tr>
+                <td><xmp>&#x20AC;</xmp></td>
+                <td>genera</td>
+                <td>&#x20AC;</td>
+            </tr>
+        </table>
+        <p>
+            Ovviamente, però, esistono centinaia di caratteri speciali. Potete trovare i loro codici alle seguenti pagine:
+            <ul>
+                <li>
+                    <a href="https://www.w3schools.com/charsets/ref_utf_arrows.asp" target="_blank">Pagina con elenco delle frecce</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp" target="_blank">Pagina con elenco deli simboli</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/charsets/ref_utf_currency.asp" target="_blank">Pagina con elenco delle valute</a>
+                </li>
+            </ul>
+        </p>
+    </body>
+</html>

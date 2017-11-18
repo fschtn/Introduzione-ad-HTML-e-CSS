@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Selettori, attributi e valori</title>
+    </head>
+    <body>
+        <h1>Selettori, attributi e valori</h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            Le uniche 3 cose da sapere riguardo il CSS sono: selettori, attributi e valori.<br />
+            Si, sono poche cose, ma le combinazioni fra esse sono praticamente infinite, soprattutto se si considera che a ciascun elemento HTML possono essere applicati più attributi, e, di conseguenza, più valori.
+        </p>
+        <p>
+            Vediamo meglio di cosa stiamo parlando.
+        </p>
+        <h2>I selettori</h2>
+        <p>
+            Quando si deve scrivere un codice CSS, bisogna prima di tutto conoscere l'elemento (o gli elementi) che si vogliono andare a modificare.<br />
+            Per selezionatre questo/i elemento/i, si usano, appunto, i <b>selettori</b>.
+        </p>
+        <p>
+            Un selettore può essere di 3 tipologie:
+            <ul>
+                <li>Per tag</li>
+                <li>Per classe</li>
+                <li>Per identificativo</li>
+            </ul>
+            Un selettore per tag, come si può capire, andrà a modificare tutti i tag che corrispondono a quel tipo.<br />
+            Un selettore per classe, invece, selezionera tutti gli elementi HTML a cui sarà stato assegnato l'attributo <code>class</code> uguale a quello specificato.<br />
+            I selettori per id, selezioneranno invece tutti gli elementi HTML con l'attributo <code>id</code> uguale a quello specficato.<br />
+        </p>
+        <p>
+            Visti così, però, sembra non ci siano molte differenze fra i selettori.<br />
+            La grande differenza si ha, però, nel numero di elementi che ciascuno di essi andrà a modificare.
+            Infatti, usando un selettore di tag, si andranno a modificare tutti gli elementi corrispondenti a quel tag<br />
+            Usando invece un selettore per classe, si andranno a modifica solo i tag che avranno l'attributo <code>class</code> corrispondente a quello (che potrebbe essere attribuito anche a tag differenti).<br />
+            Usando invece un selettore di id, si andranno a modificare solo gli elementi che hanno l'attributo <code>id</code> uguale a quello specificato.<br />
+            In questo caso, però, l'attributo <code>id</code> viene solitamente usato per identificare un unico elemento nella pagina, poichè è uno dei metodi più semplici per selezionare un elemento in JavaScript.<br />
+        </p>
+        <p>
+            <i>Per questo motivo, consiglio sempre di utilizzare le <b>class</b>i per dare lo stile agli elementi (anche se è uno solo) e gli <b>id</b>entificatori per utilizzare gli elementi in JavaScript.</i>
+        </p>
+        <p>
+            Dal lato pratico, invece, per specificare quale tipo di selettore si vuole usare, bisogna far precedere alla stringa della selezione un carattere:
+            <ul>
+                <li><i>nessuno</i> — Per utilizzare un selettore di tag</li>
+                <li><b>.</b> - Per utilizzare un selettore di classe</li>
+                <li><b>#</b> - Per utilizzare un selettore di id</li>
+            </ul>
+            Vediamoli però in maniera più "diretta":
+        </p>
+        <xmp>    <style>
+        strong {
+            color: red;
+        }
+        .classe {
+            color: blue;
+        }
+        #identificativo {
+            color: green;
+        }
+    </style>
+    <strong>Questo testo dovrebbe essere rosso (e grassetto)</strong><br />
+    <span class="classe">Questo testo dovrebbe essere blu</span><br />
+    <span id="identificativo">Questo testo dovrebbe essere verde</span></xmp>
+        <p>
+            Questo codice, dovrebbe generare il seguente risultato:
+        </p>
+        <style>
+            strong {
+                color: red;
+            }
+            .classe {
+                color: blue;
+            }
+            #identificativo {
+                color: green;
+            }
+        </style>
+        <strong>Questo testo dovrebbe essere rosso (e grassetto)</strong><br />
+        <span class="classe">Questo testo dovrebbe essere blu</span><br />
+        <span id="identificativo">Questo testo dovrebbe essere verde</span><br />
+        <p>
+            Come possiamo vedere, il primo selettore modifica solamente il tag <code>strong</code>, il secondo modifica solo il tag <code>span</code> con attributo <code>class=classe</code> e il terzo modifica solamente il tag <code>span</code> con attributo <code>id=identificativo</code>.
+        </p>
+        <h2>Gli attributi</h2>
+        <p>
+            Nell'esempio precedente, implicitamente, abbiamo usato un selettore per modificare il colore dei vari elementi.<br />
+        </p>
+        <p>
+            Il selettore, nel nostro caso, era, appunto, <code>color</code>.
+        </p>
+        <p>
+            In CSS esistono centinaia (se non migliaia di attributi), che però vedremo meglio andando avanti nello studio del CSS.
+        </p>
+        <h2>I valori</h2>
+        <p>
+            Per quanto riguarda i valori, possono essere di molti tipi, ma quelli che si ripetono più spesso sono solitamente quelli riguardo le dimensioni e i colori.
+        </p>
+        <p>
+            Riguardo le dimensioni, è possibile impostarle utilizzando varie unità di misura:
+            <ul>
+                <li><code><b>px</b></code> — Specificando la dimensione in pixel</li>
+                <li><code><b>in</b></code> - Specificando la dimensioni in inch</li>
+                <li><code><b>%</b></code> - Specificando la dimensione in percentuale rispetto all'elemento "contenitore" più vicino</li>
+                <li><code><b>vw</b></code> - Specificando la dimensione in relazione diretta alla larghezza della finestra (cambierà quando la finestra verrà ridimensionata)</li>
+                <li><code><b>vh</b></code> - Specificando la dimensione in relazione diretta all'altezza della finestra (cambierà quando la finestra verrà ridimensionata)</li>
+            </ul>
+        </p>
+        <p>
+            Riguardo i colori, invece, ci sono diverse tipologie di rappresentazione:
+            <ul>
+                <li><code><b>rgb()</b></code> — Specificando, all'interno delle parentesi, in ordine, la quantità (fra 0 e 255) di <i>red</i>, <i>green</i> e <i>blue</i></li>
+                <li><code><b>rgba()</b></code> - Come il precedente, con l'unica differenza che va specficato un quarto valore: <b>alpha</b>, che rappresenta la percentuale di opacità del colore (fra 0.00 e 1.00)</li>
+                <li><code><b>#HEX</b></code> - Con questa rappresentazione, bisogna utilizzare 6 caratteri, suddivisi in 3 coppie, ciascuna delle quali rappresenta (in esadecimale, con un valore compreso fra 00 e FF), la quantità, in ordine, di <i>red</i>, <i>green</i> e <i>blue</i></li>
+                <li><code><b>stringa</b></code> — Alcune stringhe sono riconosciute dal browser come colori, ma si perdono molte gradazioni (<a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank">elenco completo qui</a>)</li>
+            </ul>
+        </p>
+        <p>
+            Volendo ora riprendere l'esempio precedente, modificato con le nuove conoscenze, possiamo scrivere il codice:
+        </p>
+        <xmp>    <style>
+        strong {
+            color: rgba(255,0,0);
+        }
+        .classe {
+            color: #0000ff;
+        }
+        #identificativo {
+            color: green;
+        }
+    </style>
+    <strong>Questo testo dovrebbe essere rosso (e grassetto)</strong><br />
+    <span class="classe">Questo testo dovrebbe essere blu</span><br />
+    <span id="identificativo">Questo testo dovrebbe essere verde</span></xmp>
+        <p>
+            Che rappresenterà:
+        </p>
+        <style>
+            strong {
+                color: rgba(255,0,0);
+            }
+            .classe {
+                color: #0000ff;
+            }
+            #identificativo {
+                color: green;
+            }
+        </style>
+        <strong>Questo testo dovrebbe essere rosso (e grassetto)</strong><br />
+        <span class="classe">Questo testo dovrebbe essere blu</span><br />
+        <span id="identificativo">Questo testo dovrebbe essere verde</span>
+    </body>
+</html>
