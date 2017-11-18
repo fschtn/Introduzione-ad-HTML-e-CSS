@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Il valore inherit</title>
+        <link href="foglio.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Il valore <code>inherit</code></h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            Il valore <code>inherit</code> ha un ruolo speciale nel CSS.<br />
+            Questo valore, infatti, specifica che il valore da dare a quell'attributo, non verrà specificato, ma dovrà essere richiesto all'elemento padre dell'elemento stesso.
+        </p>
+        <p>
+            Ad esempio, se in una <code>div</code> aggiungiamo un tag <code>span</code> che contiene del testo, quando andremo a specificare <code>font-family: inherit;</code> per il tag <code>span</code>, quest'ultimo capirù che la font-family è specificata all'interno del codice CSS riferito alla <code>div</code>.
+        </p>
+        <p>
+            Questo valore viene usato molto spesso nei css di default dei browser, per fare in modo che degli attributi vengano specificati nel CSS del <code>body</code> e si riflettano così all'interno di tutta la pagina.<br />
+            Questo valore ha infatti un effetto "a cascata", qualora due elemento consecutivi dovessero applicarlo.
+        </p>
+    </body>
+</html>

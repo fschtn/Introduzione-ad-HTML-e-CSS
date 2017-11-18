@@ -1,7 +1,7 @@
 xmp {
     display: inline-block;
     color: #fff;
-    background: #111;
+    background: #202020;
     padding: 15px 20px;
     margin: 0px 0px 0px 20px;
     letter-spacing: 1px;
@@ -10,9 +10,10 @@ xmp {
 }
 
 code {
-    background: #111;
+    background: #202020;
     color: #fff;
     display: inline-block;
-    padding: 4px 7px;
+    padding: 3px 7px;
+    margin: 1px 2px;
     border-radius: 4px;
 }

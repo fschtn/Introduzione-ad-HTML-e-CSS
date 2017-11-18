@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <title>L'attributo position</title>
+        <link href="foglio.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>L'attributo <code>position</code></h1>
+        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            L'attributo <code>position</code> viene usato, in CSS, per specificare in che maniera posizionare l'elemento sul quale viene applicato.
+        </p>
+        <p>
+            Prima di vedere come utilizzare questo attributo, specifichiamo che: <u>specificando un qualsiasi valore per questo attributo, bisognerà utilizzare altri attributi per modificarne effettivamente il posizionamento.</u><br />
+            Questi attributi sono, rispettivamente, <code>top</code>, <code>bottom</code>, <code>left</code> e <code>right</code>.<br />
+            Non è obbligatorio utilizzarli tutti e 4, anzi, è meglio utilizzarne solamente 2: uno per la posizione orizzontale e uno per la posizione verticale.<br />
+            Vedremo meglio negli esempi come vengono integrati con l'attributo <code>position</code>.
+        </p>
+        <p>
+            I valori che questo attributo può assumere, dicevamo, sono 5 (+1, l'<a href="../inherit/index.html"><code>inherit</code></a>), che vediamo nel dettaglio:
+        </p>
+        <table>
+            <thead>
+                <th>
+                    Sorgente
+                </th>
+                <th>
+                    Esempio
+                </th>
+                <th>
+                    Descrizione
+                </th>
+            </thead>
+            <tr id="absolute">
+                <td>
+                    <code>absolute</code>
+                </td>
+                <td>
+                    <a href="ex-absolute.html">Esempio di absolute</a>
+                </td>
+                <td>
+                    Questo valore specifica che l'elemento dovrà essere posizionato nel punto preciso che verrà specificato (di cui, quindi, si conoscono le coordinate).<br />
+                    Specificando questo valore, la posizione sarà rilevata rispetto al suo elemento genitore che ha un attributo <code>position</code> definito. Nel caso in cui non ne sia presente nessuno, verrà preso di default il punto in alto a sinistra della pagina (che rappresenta il <code>body</code>)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>fixed</code>
+                </td>
+                <td>
+                    <a href="ex-fixed.html">Esempio di fixed</a>
+                </td>
+                <td>
+                    Allo stesso modo dell'<a href="#absolute"><code>absolute</code></a>, questo valore specifica che l'elemento dovrà essere posizionato in un punto preciso della finestra (<u>da notare</u>: non della pagina, ma della finestra), restando così ancorato alla finestra senza tenere conto dello scorrimento della pagina.<br />
+                    Bisogna <b>fare attenzione</b> a specificare le coordinate della posizione in maniera corretta, in modo da non far fuoriuscire l'elemento dallo schermo.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>relative</code>
+                </td>
+                <td>
+                    <a href="ex-relative.html">Esempio di relative</a>
+                </td>
+                <td>
+                    Usando <code>relative</code>, si specificherà che la posizione dovrà essere relativa a quella attuale, cioè quella dell'elemento senza l'attributo <code>position</code>.<br />
+                    Applicando questa scelta, <u>bisogna conoscere precisamente</u> di quanti pixel/inch muovere l'elemento nelle varie direzioni.<br />
+                    Ad esempio, un elemento con <code>position: relative; top: 50px; right: 20px;</code> si sposterà, dalla sua posizione attuale, di <code>50px</code> dall'alto e di <code>20px</code> da destra.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>sticky</code>
+                </td>
+                <td>
+                    <a href="ex-sticky.html">Esempio di sticky</a>
+                </td>
+                <td>
+                    Molto simile al valore <code>fixed</code>, ma basato sulla posizione di scrolling dell'utente.<br />
+                    Impostando la <code>position</code> con questo valore, si dovranno definire le coordinate minime a cui l'elemento si dovrà posizionare.<br />
+                    Se ad esempio un elemento si trova a <code>340px , 220px</code>, ma si vuole fare in modo che venga fissato a 10 pixel dalla parte alta dello schermo quando l'utente "scrolla" la pagina, si dovrà scegliere <code>top: 10px;</code>, in modo che la posizione (minima) dall'alto sia di 10px.
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>static</code>
+                </td>
+                <td>
+
+                </td>
+                <td>
+                    &Egrave; il valore di default che ciascun elemento ha.<br />
+                    Posiziona l'elemento esattamente dove è stato inserito in HTML.
+                </td>
+            </tr>
+        </table>
+        <p style="text-align: center;">
+            <small>Notiamo inoltre che, da questa lezione, viene usato un nuovo foglio di stile, che si può realizzare con gli attributi studiati finora.<br />
+            <a href="foglio.css">Il foglio si può vedere qui</a>.</small>
+        </p>
+    </body>
+</html>
