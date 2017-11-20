@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Le transizioni</title>
+		<meta charset='utf-8'>
+        <link href="foglio.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Le transizioni</h1>
+        <p>
+            <a href="../../index.html">&larr; Torna al menù</a>
+        </p>
+        <p>
+            Le transizioni, in CSS, vengono utilizzate per rendere più interattiva e animata l'esperienza dell'utente all'interno della pagina.<br />
+            Per poterle utilizzare, bisogna prima di tutto conoscere <a href="../pseudo-classi/index.html">le pseudo-classi</a>, dopodichè si può pensare alle transizioni come una "fludificazione" del passaggio dallo stile di una classe allo stile di una pseudo classe.
+        </p>
+        <blockquote>
+            Volendo fare un esempio, si può pensare che, se un testo è scritto in nero e, quando ci si passa il mouse, il testo deve diventare bianco, tramite le transizioni, esso, nel tempo specificato, attraverserà prima tutte le gradazioni di grigio presenti nel mezzo.
+        </blockquote>
+        <p>
+            Non sono ancora molto diffuse sul web, perchè viste come "poco professionali", ma possono spesso rendere migliore l'esperienza di un utente, aiutandolo nella navigazione e nella comprensione di alcune funzioni che, altrimenti, non capirebbe.
+        </p>
+        <p>
+            Per conoscere le transizioni, si possono introdurre i 4 attributi che regolano le transizioni:
+            <ul>
+                <li><code>transiton-property</code> specifica su quali attributi la transizione dovrà avere effetto (es. <code>width</code>, <code>color</code>, <code>background</code>, ...)</li>
+                <li><code>transiton-delay</code> specifica, al verificarsi dell'evento che abilita la pseudo-classe, quanto tempo dovrà trascorrere prima che la transizione inizi (es. <code>1.2s</code>, <code>530ms</code>, ...)</li>
+                <li><code>transiton-duration</code> specifica quanto tempo deve durare la transizioni (es. <code>1s</code>, <code>890ms</code>, ...)</li>
+                <li>
+                    <code>transiton-timing-function</code> specifica in che modo deve essere regolata la "curva di transizione", che può assumere i seguenti valori:
+                    <ul>
+                        <li><code>linear</code> farà avanzare la transizione per tutto il tempo alla stessa velocità</li>
+                        <li><code>ease</code> farà avanzare la transizione in maniera inizialmente lenta, dopodichè accelera e termina con un rallentamento</li>
+                        <li><code>ease-in</code> farà avanzare la transizione in maniera lenta e poi accelerata fino alla fine</li>
+                        <li><code>ease-out</code> farà avanzare la transizione in maniera rapida, decelerando verso la fine</li>
+                        <li><code>ease-in-out</code> è molto simile al valore <code>ease</code>, ma con un'accelerazione e rallentamento meno marcati</li>
+                        <li><code>cubic-bezier(n,n,n,n)</code> permette di specificare la propria funzione <a href="http://cubic-bezier.com/#.17,.67,.83,.67" target="_blank">cubic-bezier</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </p>
+        <p>
+            Tutte le proprietà delle transizioni possono però essere riassunte all'interno di un unico attributo: <code>transition</code><br />
+            In questo attributo, infatti, è possibile inserire tutte le proprietà, nel seguente ordine: <code>transition: &lt;property&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt;;</code>
+        </p>
+        <h2>Esempio <code>linear</code></h2>
+        <p>
+            Sorgente:
+        </p>
+        <p>
+            <xmp><style>
+    #uno {
+        transition-timing-function: linear;
+    }
+</style>
+<div id="uno"></div></xmp>
+        </p>
+        <p>
+            Risultato (passa il mouse sopra la <code>div</code>):
+        </p>
+        <style>
+            div {
+                background: black;
+                width: 50px;
+                height: 50px;
+                transition-property: all;
+                transition-duration: 3s;
+                margin-bottom: 150px;
+            }
+            div:hover {
+                background: red;
+                width: 100%;
+            }
+            #uno {
+                transition-timing-function: linear;
+            }
+        </style>
+        <div id="uno"></div>
+        <h2>Esempio <code>ease</code></h2>
+        <p>
+            Sorgente:
+        </p>
+        <p>
+            <xmp><style>
+    #due {
+        transition-timing-function: ease;
+    }
+</style>
+<div id="due"></div></xmp>
+        </p>
+        <p>
+            Risultato (passa il mouse sopra la <code>div</code>):
+        </p>
+        <style>
+            #due {
+                transition-timing-function: ease;
+            }
+        </style>
+        <div id="due"></div>
+        <h2>Esempio <code>ease-in</code></h2>
+        <p>
+            Sorgente:
+        </p>
+        <p>
+            <xmp><style>
+    #tre {
+        transition-timing-function: ease-in;
+    }
+</style>
+<div id="tre"></div></xmp>
+        </p>
+        <p>
+            Risultato (passa il mouse sopra la <code>div</code>):
+        </p>
+        <style>
+            #tre {
+                transition-timing-function: ease-in;
+            }
+        </style>
+        <div id="tre"></div>
+        <h2>Esempio <code>ease-out</code></h2>
+        <p>
+            Sorgente:
+        </p>
+        <p>
+            <xmp><style>
+    #quattro {
+        transition-timing-function: ease-out;
+    }
+</style>
+<div id="quattro"></div></xmp>
+        </p>
+        <p>
+            Risultato (passa il mouse sopra la <code>div</code>):
+        </p>
+        <style>
+            #quattro {
+                transition-timing-function: ease-out;
+            }
+        </style>
+        <div id="quattro"></div>
+        <h2>Esempio <code>ease-in-out</code></h2>
+        <p>
+            Sorgente:
+        </p>
+        <p>
+            <xmp><style>
+    #cinque {
+        transition: all 2s ease-in-out;
+    }
+</style>
+<div id="cinque"></div></xmp>
+        </p>
+        <p>
+            Risultato (passa il mouse sopra la <code>div</code>):
+        </p>
+        <style>
+            #cinque {
+                transition-timing-function: ease-in-out;
+            }
+        </style>
+        <div id="cinque"></div>
+    </body>
+</html>
