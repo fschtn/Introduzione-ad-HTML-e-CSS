@@ -6,7 +6,9 @@
     </head>
     <body>
         <h1>I form</h1>
-        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            <a href="../../index.html">&larr; Torna al menù</a>
+        </p>
         <p>
             I form servono all'utente per inserire informazioni che verranno poi gestite dal sito web (lato server).<br />
             Un esempio di form può essere il seguente, in cui abbiamo solamente un campo:
@@ -31,8 +33,8 @@
             Il tag principale di ogni form è, appunto, <b>form</b>.<br />
             Questo tag deve essere aperto e chiuso, e dovrà contenere al suo interno tutti i campi da compilare, che vengono identificati con <b>input</b>.
         </p>
-        <h2>Tipi di input</h2>
         <p>
+            <h2>Tipi di input</h2>
             Nonostante i tipi di input siano moltissimi, hanno molte cose in comune, come ad esempio gli attributi che vi possono essere applicati.
             <ul>
                 <li><code>name</code> è l'attributo che deve essere presente in tutti i tag all'interno del form, deve avere una stringa di testo che rappresenta quell'input, e che verrà usata dal server per identificare quel campo una volta che il form sarà inviato</li>
@@ -50,11 +52,15 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <input type="text" name="nome" /></xmp>
+        <p>
+            <xmp>    <input type="text" name="nome" /></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="text" />
+        <p>
+            <input type="text" />
+        </p>
         <p>
             Gli attributi che è possibile applicare su questo tag sono principalmente:
             <ul>
@@ -73,11 +79,15 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <input type="password" name="pwd" /></xmp>
+        <p>
+            <xmp>    <input type="password" name="pwd" /></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="password" name="pwd" />
+        <p>
+            <input type="password" name="pwd" />
+        </p>
 
 
 
@@ -88,13 +98,17 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <input type="radio" name="sesso" value="m" /> M<br />
+        <p>
+            <xmp>    <input type="radio" name="sesso" value="m" /> M<br />
     <input type="radio" name="sesso" value="f" /> F</xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="radio" name="sesso" value="m" /> M<br />
-        <input type="radio" name="sesso" value="f" /> F
+        <p>
+            <input type="radio" name="sesso" value="m" /> M<br />
+            <input type="radio" name="sesso" value="f" /> F
+        </p>
 
 
 
@@ -105,6 +119,9 @@
         <p>
             Il codice seguente:
         </p>
+        <p>
+
+        </p>
         <xmp>    <input type="checkbox" name="gusti" value="film" /> Film<br />
     <input type="checkbox" name="gusti" value="musica" /> Musica<br />
     <input type="checkbox" name="gusti" value="spettacolo" /> Spettacolo<br />
@@ -112,10 +129,12 @@
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="checkbox" name="gusti" value="film" /> Film<br />
-    <input type="checkbox" name="gusti" value="musica" /> Musica<br />
-    <input type="checkbox" name="gusti" value="spettacolo" /> Spettacolo<br />
-    <input type="checkbox" name="gusti" value="carte" /> Carte
+        <p>
+            <input type="checkbox" name="gusti" value="film" /> Film<br />
+            <input type="checkbox" name="gusti" value="musica" /> Musica<br />
+            <input type="checkbox" name="gusti" value="spettacolo" /> Spettacolo<br />
+            <input type="checkbox" name="gusti" value="carte" /> Carte
+        </p>
 
 
 
@@ -123,11 +142,15 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <input type="file" name="img" /></xmp>
+        <p>
+            <xmp>    <input type="file" name="img" /></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="file" name="img" />
+        <p>
+            <input type="file" name="img" />
+        </p>
 
 
 
@@ -135,7 +158,8 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <select name="provincia">
+        <p>
+            <xmp>    <select name="provincia">
         <option disabled selected>Seleziona..</option>
         <option value="usa">Agrigento</option>
         <option value="asia">Latina</option>
@@ -151,25 +175,28 @@
             <option value="nantes">Nantes</option>
         </optgroup>
     </select></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <select name="provincia">
-            <option disabled selected>Seleziona..</option>
-            <option value="usa">Agrigento</option>
-            <option value="asia">Latina</option>
-            <option value="africa">Roma</option>
-            <optgroup label="Italia">
-                <option value="agrigento">Agrigento</option>
-                <option value="latina">Latina</option>
-                <option value="roma">Roma</option>
-            </optgroup>
-            <optgroup label="Francia">
-                <option value="parigi">Parigi</option>
-                <option value="lione">Lione</option>
-                <option value="nantes">Nantes</option>
-            </optgroup>
-        </select>
+        <p>
+            <select name="provincia">
+                <option disabled selected>Seleziona..</option>
+                <option value="usa">Agrigento</option>
+                <option value="asia">Latina</option>
+                <option value="africa">Roma</option>
+                <optgroup label="Italia">
+                    <option value="agrigento">Agrigento</option>
+                    <option value="latina">Latina</option>
+                    <option value="roma">Roma</option>
+                </optgroup>
+                <optgroup label="Francia">
+                    <option value="parigi">Parigi</option>
+                    <option value="lione">Lione</option>
+                    <option value="nantes">Nantes</option>
+                </optgroup>
+            </select>
+        </p>
 
 
 
@@ -182,11 +209,15 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <textarea name="messaggio">Ciao</textarea></xmp>
+        <p>
+            <xmp>    <textarea name="messaggio">Ciao</textarea></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <textarea name="messaggio">Ciao</textarea>
+        <p>
+            <textarea name="messaggio">Ciao</textarea>
+        </p>
 
 
 
@@ -199,11 +230,15 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <button name="genera_cf" onclick="alert('Hai premuto, bravo.');">Premimi!</button></xmp>
+        <p>
+            <xmp>    <button name="genera_cf" onclick="alert('Hai premuto, bravo.');">Premimi!</button></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <button name="genera_cf" onclick="alert('Hai premuto, bravo.');">Premimi!</button>
+        <p>
+            <button name="genera_cf" onclick="alert('Hai premuto, bravo.');">Premimi!</button>
+        </p>
         <p>
             Al quale è possibile far eseguire qualsiasi funzione JavaScript.<br />
             In questo caso, non farà altro che mostrare un avviso
@@ -219,11 +254,15 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <input type="image" src="../11/drago.jpg" name="send2" /></xmp>
+        <p>
+            <xmp>    <input type="image" src="../img/drago.jpg" name="send2" /></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="image" src="../11/drago.jpg" name="send2" />
+        <p>
+            <input type="image" src="../img/drago.jpg" name="send2" />
+        </p>
 
 
 
@@ -235,11 +274,15 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <input type="hidden" name="user-id" value="127863" /></xmp>
+        <p>
+            <xmp>    <input type="hidden" name="user-id" value="127863" /></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="hidden" name="user-id" value="127863" />
+        <p>
+            <input type="hidden" name="user-id" value="127863" />
+        </p>
         <p>
             Che ovviamente non verrà visualizzato, perchè l'utente non deve essere in grado di visualizzare o modificare il valore di questo campo.
         </p>
@@ -252,11 +295,15 @@
             Premendolo, le informazioni inserite negli input compresi nel tag <code>form</code> verranno inviate, con il metodo specificato come attributo, all'indirizzo specificato nella <code>action</code> del tag <code>form</code><br />
             Il testo al suo interno può essere personalizzato tramite l'attributo <code>value</code>
         </p>
-        <xmp>    <input type="submit" value="Invia" /></xmp>
+        <p>
+            <xmp>    <input type="submit" value="Invia" /></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="submit" value="Invia" />
+        <p>
+            <input type="submit" value="Invia" />
+        </p>
 
 
 
@@ -267,14 +314,14 @@
         <p>
             Il codice seguente:
         </p>
-        <xmp>    <input type="reset" /></xmp>
+        <p>
+            <xmp>    <input type="reset" /></xmp>
+        </p>
         <p>
             Può far visualizzare un risultato del genere:
         </p>
-        <input type="reset" /><br />
-
-
-        <br /><br />
-
+        <p>
+            <input type="reset" /><br />
+        </p>
     </body>
 </html>

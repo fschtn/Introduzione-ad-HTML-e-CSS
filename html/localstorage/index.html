@@ -22,29 +22,36 @@
     </head>
     <body onload="aggiorna_dati();">
         <h1>Il localStorage</h1>
-        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            <a href="../../index.html">&larr; Torna al menù</a>
+        </p>
         <p>
             Per integrare quello che abbiamo visto finora, possiamo creare, ad esempio, un form che, al momento dell'invio, richiama una funzione JavaScript (che vedremo meglio in seguito).
         </p>
         <p>
             Il form verrà generato tramite il seguente codice:
+        </p>
+        <p>
             <xmp>    <form name="info" onsubmit="return memorizza_dati();">
         <input type="text" name="nome"  placeholder="Nome" /><br />
         <input type="number" name="matricola" placeholder="Matricola" /><br />
         <input type="submit" value="Memorizza dati" />
     </form></xmp>
+        </p>
+        <p>
             Che avrà quindi come risultato:
         </p>
-        <form name="info" onsubmit="return memorizza_dati();">
-            <input type="text" name="nome"  placeholder="Nome" /><br />
-            <input type="number" name="matricola" placeholder="Matricola" /><br />
-            <input type="submit" value="Memorizza dati" />
-        </form>
+        <p>
+            <form name="info" onsubmit="return memorizza_dati();">
+                <input type="text" name="nome"  placeholder="Nome" /><br />
+                <input type="number" name="matricola" placeholder="Matricola" /><br />
+                <input type="submit" value="Memorizza dati" />
+            </form>
+        </p>
         <p>
             I dati memorizzati tramite l'invio della form sono:<br /><br />
             <b>Nome </b> — <span id="local-nome"></span><br />
             <b>Matricola </b> — <span id="local-matricola"></span>
         </p>
-
     </body>
 </html>

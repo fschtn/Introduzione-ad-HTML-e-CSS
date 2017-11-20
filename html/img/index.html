@@ -13,24 +13,40 @@
         </p>
         <p>
             Osserviamo ora il codice:
+        </p>
+        <p>
             <xmp>    <img src="drago.jpg" /></xmp>
+        </p>
+        <p>
             Che mostra questo risultato:<br />
             <img src="drago.jpg" /><br />
             L'immagine appena vista, si trova però all'interno della cartella corrente.<br />
             E' possibile far riferimento ad altre immagini tramite un percorso relativo:
+        </p>
+        <p>
             <xmp>    <img src=immagine/drago.jpg /></xmp>
+        </p>
+        <p>
             Che mostrerà:<br />
             <img src=immagine/drago.jpg /><br />
             Oppure inserire un percorso assoluto di un'immagine presente su un dominio web:
+        </p>
+        <p>
             <xmp>    <img src="https://pbs.twimg.com/profile_images/712352300199710720/HF1Om28Q.jpg" /></xmp>
+        </p>
+        <p>
             Che avrà risultato:<br />
             <img src="https://pbs.twimg.com/profile_images/712352300199710720/HF1Om28Q.jpg" />
         </p>
         <p>
             Ovviamente è possibile anche inserire un link ad un'immagine (ovvero inserire, all'interno di un link, un tag di immagine), come:
+        </p>
+        <p>
             <xmp>    <a href=http://google.com/?q=Dragonball target=_blank>
         <img src="drago.jpg" />
     </a></xmp>
+        </p>
+        <p>
             Che avrà il seguente effetto:<br />
             <a href=http://google.com/?q=Dragonball target=_blank><img src="drago.jpg" /></a>
         </p>
@@ -38,7 +54,11 @@
         <p>
             Di una immagine è possibile personalizzare l'altezza e la larghezza tramite due attributi: <i>height</i> e <i>width</i>.<br />
             La stessa immagine di prima, può essere visualizzata come:
+        </p>
+        <p>
             <xmp>    <img src="drago.jpg" width="500" height="100" /></xmp>
+        </p>
+        <p>
             Che ridimensionerà l'immagine nel seguente modo:<br />
             <img src="drago.jpg" width="500" height="100" />
         </p>
@@ -53,12 +73,18 @@
             Ad esempio, questa è un'immagine del titanic:<br />
             <img src="titanic.jpg" alt="Foto del Titanic" /><br />
             Identificata dal codice:
+        </p>
+        <p>
             <xmp>    <img src="titanic.jpg" alt="Foto del Titanic" /></xmp>
         </p>
         <h2>Bordi dell'immagine</h2>
         <p>
             E' possibile aggiungere, senza l'ausilio del CSS, dei bordi all'immagine, tramite l'attributo <i>border</i>:<br />
+        </p>
+        <p>
             <xmp>            <img src="drago.jpg" width="100" border="5px" /></xmp>
+        </p>
+        <p>
             Che mostrerà:<br />
             <img src="drago.jpg" width="100" border="5px" />
         </p>
@@ -66,7 +92,11 @@
         <p>
             Sempre senza il CSS, è possibile decidere quanto spazio deve essere presente fra l'immagine e il contenuto più vicino.<br />
             Ciò è possibile tramite gli attributi <code>vspace</code> e <code>hspace</code>, che definiscono rispettivamente la spaziatura verticale e orizzontale:
+        </p>
+        <p>
             <xmp>            <img src="drago.jpg" width="100" vspace="50" hspace="50" /></xmp>
+        </p>
+        <p>
             Che avrà risultato:<br />
             <img src="drago.jpg" width="100" vspace="50" hspace="50" />
         </p>
@@ -95,15 +125,5 @@
         <p>
             <img src="drago.jpg" align="right" />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
-
-        <!-- <p>
-            <img src="drago.jpg" width="1000px" style="position: fixed; top: 0px; left: 0px; z-index: 100;"/>
-
-            <div style="width: 250px; height: 300px; background: rgba(0,0,0,1); position: fixed; top: 200px; left: 350px; z-index: 1900000; cursor: pointer;">
-
-            </div>
-        </p> -->
-
-
     </body>
 </html>

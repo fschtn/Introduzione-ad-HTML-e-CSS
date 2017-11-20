@@ -6,7 +6,9 @@
     </head>
     <body>
         <h1>Selettori, attributi e valori</h1>
-        <a href="../../index.html">&larr; Torna al menù</a>
+        <p>
+            <a href="../../index.html">&larr; Torna al menù</a>
+        </p>
         <p>
             Le uniche 3 cose da sapere riguardo il CSS sono: selettori, attributi e valori.<br />
             Si, sono poche cose, ma le combinazioni fra esse sono praticamente infinite, soprattutto se si considera che a ciascun elemento HTML possono essere applicati più attributi, e, di conseguenza, più valori.
@@ -28,7 +30,7 @@
             </ul>
             Un selettore per tag, come si può capire, andrà a modificare tutti i tag che corrispondono a quel tipo.<br />
             Un selettore per classe, invece, selezionera tutti gli elementi HTML a cui sarà stato assegnato l'attributo <code>class</code> uguale a quello specificato.<br />
-            I selettori per id, selezioneranno invece tutti gli elementi HTML con l'attributo <code>id</code> uguale a quello specficato.<br />
+            I selettori per id, selezioneranno invece tutti gli elementi HTML con l'attributo <code>id</code> uguale a quello specficato.
         </p>
         <p>
             Visti così, però, sembra non ci siano molte differenze fra i selettori.<br />
@@ -50,7 +52,8 @@
             </ul>
             Vediamoli però in maniera più "diretta":
         </p>
-        <xmp>    <style>
+        <p>
+            <xmp>    <style>
         strong {
             color: red;
         }
@@ -64,6 +67,7 @@
     <strong>Questo testo dovrebbe essere rosso (e grassetto)</strong><br />
     <span class="classe">Questo testo dovrebbe essere blu</span><br />
     <span id="identificativo">Questo testo dovrebbe essere verde</span></xmp>
+        </p>
         <p>
             Questo codice, dovrebbe generare il seguente risultato:
         </p>
@@ -80,7 +84,7 @@
         </style>
         <strong>Questo testo dovrebbe essere rosso (e grassetto)</strong><br />
         <span class="classe">Questo testo dovrebbe essere blu</span><br />
-        <span id="identificativo">Questo testo dovrebbe essere verde</span><br />
+        <span id="identificativo">Questo testo dovrebbe essere verde</span>
         <p>
             Come possiamo vedere, il primo selettore modifica solamente il tag <code>strong</code>, il secondo modifica solo il tag <code>span</code> con attributo <code>class=classe</code> e il terzo modifica solamente il tag <code>span</code> con attributo <code>id=identificativo</code>.
         </p>
@@ -123,7 +127,8 @@
         <p>
             Volendo ora riprendere l'esempio precedente, modificato con le nuove conoscenze, possiamo scrivere il codice:
         </p>
-        <xmp>    <style>
+        <p>
+            <xmp>    <style>
         strong {
             color: rgba(255,0,0);
         }
@@ -137,6 +142,7 @@
     <strong>Questo testo dovrebbe essere rosso (e grassetto)</strong><br />
     <span class="classe">Questo testo dovrebbe essere blu</span><br />
     <span id="identificativo">Questo testo dovrebbe essere verde</span></xmp>
+        </p>
         <p>
             Che rappresenterà:
         </p>
