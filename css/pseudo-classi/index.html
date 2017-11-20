@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Le pseudo-classi</title>
+		<meta charset='utf-8'>
+    </head>
+    <body>
+        <h1>Le pseudo-classi</h1>
+        <p>
+            <a href="../../index.html">&larr; Torna al menù</a>
+        </p>
+        <p>
+            Le pseudo-classi vengono usate in CSS per selezionare degli elementi in maniera dinamica, senza dovervi per forza aggiungere degli attributi <code>class</code> o <code>id</code>.<br />
+        </p>
+        <p>
+            Questi selettori permettono di selezionare, ad esempio, un elemento che ha un determinato attributo o, più nello specifico, che ha un determinato valore per un certo attributo. Allo stesso modo, può selezionare tutti gli elementi pari all'interno di una <code>div</code>, o solo quelli multipli di un determinato numero.
+        </p>
+        <p>
+            Vediamo nello specifico come funzionano:
+        </p>
+        <table cellspacing="0px" cellpadding="10px" border="1px">
+            <tr>
+                <td>
+                    <code>a:link</code>
+                </td>
+                <td>
+                    Identifica tutti gli <code>a</code> che sono <u>link <b>non</b> visitati</u>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>a:visited</code>
+                </td>
+                <td>
+                    Identifica tutti gli <code>a</code> che sono <u>link visitati</u>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>a.fonte:active</code>
+                </td>
+                <td>
+                    Identifica l'<code>a</code> con <code>class="fonte"</code> nel momento in cui viene cliccato
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>.elem:hover</code>
+                </td>
+                <td>
+                    Applica lo stile agli elementi con <code>class="elem"</code> nel momento in cui ci si passa il mouse sopra
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>div.contenitore</code>
+                </td>
+                <td>
+                    Identifica tutte le div che hanno <u>anche</u> <code>class="contenitore"</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>p:first-child</code><br />
+                    <code>p:last-child</code>
+                </td>
+                <td>
+                    Identifica il tag <code>p</code> che è il primo/ultimo figlio del suo genitore
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>p:first-of-type</code><br />
+                    <code>p:last-of-type</code>
+                </td>
+                <td>
+                    Identifica il tag <code>p</code> che è il primo/ultimo figlio <u>di quel tipo</u> del suo genitore
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>input[type="email"]</code>
+                </td>
+                <td>
+                    Applica lo stile specificato a tutti gli input che hanno <code>type="email"</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>input[type="checkbox"]:checked</code>
+                </td>
+                <td>
+                    Applica lo stile a tutti i <code>checkbox</code> che sono spuntati
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>input:disabled</code>
+                </td>
+                <td>
+                    Identifica tutti gli input che hanno l'attributo <code>disabled</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>input:focus</code>
+                </td>
+                <td>
+                    Identifica l'input nel momento in cui viene focalizzato, ovvero viene messo il cursore al suo interno
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>input:invalid</code>
+                </td>
+                <td>
+                    Applica lo stile specificato a tutti gli input che hanno un valore non valido
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>input:required</code>
+                </td>
+                <td>
+                    Applica lo stile specificato a tutti gli input che hanno l'attributo <code>required</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>h1:not(.riga)</code>
+                </td>
+                <td>
+                    Applica lo stile specificato a tutti gli <code>h1</code> che <u>non hanno</u> l'attributo <code>class="riga"</code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>div:nth-child(2n)</code>
+                </td>
+                <td>
+                    Applica lo stile specificato a tutte le <code>div</code> che, nel genitore, sono elementi multipli di 2.<br />
+                    <i>Ad esempio, se il <code>body</code> contiene 6 <code>div</code>, verranno selezionate solo la 2, la 4, e la 6</i><br />
+                    Ovviamente, all'interno delle parentesi, è possibile scrivere funzioni più complesse, purchè usino solo addizione, sottrazione e moltiplicazione (<i>es. 2n+1</i>)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>p:only-of-type</code>
+                </td>
+                <td>
+                    Applica lo stile specificato a tutti gli elementi <code>p</code> che sono l'unico elemento all'interno del proprio genitore
+                </td>
+            </tr>
+        </table>
+        <h2>Nota</h2>
+        <p>
+            Ovviamente, le pseudo-classi possono essere utilizzati in maniera aggregata, così come per i selettori normali.
+        </p>
+        <p>
+            Ad esempio, <code>div:hover p</code> identificherà tutti i <code>p</code> all'interno delle <code>div</code> su cui è posizionato il cursore.
+        </p>
+        <br /><br /><br /><br /><br /><br /><br />
+    </body>
+</html>
