@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Introduzione a jQuery</title>
+		<meta charset='utf-8'>
+        <link href="../../shared/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Introduzione a jQuery</h1>
+            <p>
+                <a href="../../index.html">&larr; Torna al menù</a>
+            </p>
+            <p>
+                jQuery è un framework JavaScript che facilita la realizzazione di script per l'interazione con l'utente.
+            </p>
+            <p>
+                Questa struttura permette infatti, prima di tutto, di utilizzare i selettori CSS per identificare gli elementi su cui agire. Infatti, invece di utilizzare la lunga sintassi del <code>document.getElementByQualcosa</code>, è possibile utilizzare un semplice <code>$</code>, a cui dovrà essere passata come parametro una stringa che identifica il selettore CSS corrispondente all'elemento.
+            </p>
+            <p>
+                Vediamo un esempio:
+            </p>
+            <pre><code>document.getElementById('topbar');
+        // equivale a scrivere
+    $('#topbar');
+
+    document.getElementsByTagName('input');
+        // equivale a scrivere
+    $('input');
+
+    document.getElementsByClassName('titoli');
+        // equivale a scrivere
+    $('.titoli');</code></pre>
+            </p>
+            <p>
+                La stessa cosa succede anche per i metodi da richiamare sugli elementi che, oltre ad essere molto più brevi, sono spesso anche più comprensibili e comprendono più segnature per lo stesso metodo. Ovvero, richiamando (ad esempio) <code>e.html();</code> si ottiene l'HTML all'interno dell'elemento <code>e</code>, mentre richiamando <code>e.html("&lt;b&gt;Ciao!&lt;/b&gt;");</code>, si setta l'HTML all'interno dell'elemento <code>e</code> in modo che contenga <code>&lt;b&gt;Ciao!&lt;/b&gt;</code>, utilizzando così un solo metodo per eseguire due operazioni differenti.
+            </p>
+        </div>
+    </body>
+</html>
