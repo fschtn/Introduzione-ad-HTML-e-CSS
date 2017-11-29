@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Introduzione a JavaScript</title>
+		<meta charset='utf-8'>
+        <link href="../../shared/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Creazione di file e posizionamento</h1>
+            <p>
+                <a href="../../index.html">&larr; Torna al menù</a>
+            </p>
+            <p>
+                Come per il CSS, la creazione di file JavaScript è molto semplice: basta infatti scrivere un documento di testo contenente il codice JS e salvarlo con estensione <code>.js</code>
+            </p>
+            <p>
+                Se invece si vuole implementare il codice direttamente all'interno del file HTML, è possibile inserirlo nell'<code>&lt;head&gt;</code> tramite il tag <code>&lt;script&gt;...&lt;/script&gt;</code> che conterrà il relativo codice JavaScript da utilizzare.
+            </p>
+            <p>
+                Un codice come il seguente:
+            </p>
+            <p>
+<pre><xmp><!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.onload = function(e) {
+                alert("Hello world!");
+            }
+        </script>
+    </head>
+    <body>
+        Hello world di prova.
+    </body>
+</html></xmp></pre>
+            </p>
+            <p>
+                Genererà un codice come quello <a href="ex1.html" target="_blank">in questa pagina</a> (provalo!)
+            </p>
+            <p>
+                Allo stesso modo, un codice come il seguente:
+            </p>
+            <p>
+<pre><xmp>// file s1.js
+window.onload = function(e) {
+    alert("Hello world!");
+}</xmp></pre>
+            </p>
+            <p>
+<pre><xmp><!-- file ex2.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="s1.js"></script>
+    </head>
+    <body>
+        Hello world di prova.
+    </body>
+</html></xmp></pre>
+            </p>
+            <p>
+                Genererà un codice come quello <a href="ex2.html" target="_blank">in questa pagina</a> (provalo!)
+            </p>
+        </div>
+    </body>
+</html>
