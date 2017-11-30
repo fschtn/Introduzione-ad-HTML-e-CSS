@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Le media-queries</title>
+		<meta charset='utf-8'>
+        <link href="foglio.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Le media-queries</h1>
+        <p>
+            <a href="../../index.html">&larr; Torna al menù</a>
+        </p>
+        <p>
+            Quando si vogliono realizzare pagine web che si adattano alle dimensioni dello schermo, in modo da realizzare siti web <i>responsive</i>, è necessario usare diversi fogli di stile per ciascuna dimensione per cui si vuole rendere disponibile.
+        </p>
+        <p>
+            Per fare ciò, è possibile utilizzare l'attributo <code>media</code> del tag <code>like</code>, così da poter specificare le dimensioni che la finestra dell'utente deve avere per importare quel determinato foglio CSS, nel seguente modo:
+        </p>
+<pre><xmp><link rel="stylesheet" media="screen and (max-width: 599px)" href="small.css" type="text/css" />
+<link rel="stylesheet" media="screen and (min-width: 600px) and (max-width: 1200px)" href="medium.css" type="text/css" />
+<link rel="stylesheet" media="screen and (min-width: 1201px)" href="large.css" type="text/css" /></xmp></pre>
+        <p>
+            In questo modo, si specifica di importare il file <code>small.css</code> per gli schermi fino a 599px, <code>medium.css</code> per gli schermi compresi fra 600px e 1200px e <code>large.css</code> per gli schermi con dimensione sopra i 1200px.
+        </p>
+        <p>
+            Bisogna specificare che è possibile utilizzare come valore, oltre che <code>min-width</code> e <code>max-width</code>, anche <code>min-device-width</code> e <code>max-device-width</code>, che faranno quindi riferimento alle <u>dimensioni dello schermo</u> invece che alle <u>dimensioni della finestra</u>.
+        </p>
+        <h2>Media queries integrate</h2>
+        <p>
+            Se invece di creare diversi file CSS, si vuole scrivere un unico file che implementa tutte le configurazioni per le varie dimensioni, è possibile utilizzare le media-queries interne ai file CSS.
+        </p>
+        <p>
+            All'interno di un file CSS, per fare distinzioni riguardo le dimensioni della finestra, viene usata la seguente istruzione, che comprenderà all'interno delle parentesi tutto il codice da interpretare se la condizione è verificata.
+        </p>
+<pre><xmp>// file style.css
+...
+
+@media screen and (max-width: 599px) {
+    ...
+}
+@media  screen and (min-width: 600px) and (max-width: 1200px) {
+    ...
+}
+@media  screen and (min-width: 1201px) {
+    ...
+}</xmp></pre>
+        <p>
+            Questo codice avrà lo stesso identico risultato del codice precedente, con l'unica differenza che, nel codice HTML, sarò necessario inserire un solo link (e quindi caricare un unico file CSS, che verrà memorizzato in cache); nel codice CSS, invece, sarà necessario scrivere più codice, che renderà quindi il file CSS più pesante (che potrebbe non essere un problema, se la cache è attiva).
+        </p>
+    </body>
+</html>
